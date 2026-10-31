@@ -47,10 +47,10 @@ export default function App() {
   ];
 
   const reviews = [
-    { name: "Rajesh Sharma", text: "The Kaju Katli was amazingly fresh and melt-in-mouth! Ordered 20 gift boxes for my office staff during Diwali.", rating: 5 },
-    { name: "Priya Venkatesh", text: "Pure desi ghee aroma in every piece of Motichoor Laddu. Best authentic sweets shop delivery in town!", rating: 5 },
-    { name: "Amit Sunder", text: "The Diwali mithai trunk packaging looked so luxurious and royal. Will definitely order every festival season.", rating: 5 },
-    { name: "Ananya Deshmukh", text: "Prompt express delivery and vacuum packaging preserved the texture perfectly. Highly recommended!", rating: 5 },
+    { name: "vicky", text: "The Kaju Katli was amazingly fresh and melt-in-mouth! Ordered 20 gift boxes for my office staff during Diwali.", rating: 5 },
+    { name: "udhay", text: "Pure desi ghee aroma in every piece of Motichoor Laddu. Best authentic sweets shop delivery in town!", rating: 5 },
+    { name: "sara", text: "The Diwali mithai trunk packaging looked so luxurious and royal. Will definitely order every festival season.", rating: 5 },
+    { name: "Ananya ", text: "Prompt express delivery and vacuum packaging preserved the texture perfectly. Highly recommended!", rating: 5 },
   ];
 
   const faqs = [
@@ -179,7 +179,7 @@ export default function App() {
       <section id="newarrivals" className="products-section" style={{ background: 'var(--soft-purple-bg)' }}>
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>New Arrivals 🌟</h2>
+            <h2>New Arrivals </h2>
             <p>Fresh festive recipes crafted specially for this season</p>
           </div>
           <div className="product-grid">
@@ -342,7 +342,7 @@ export default function App() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-col">
-              <h4>Shree Sweets ✨</h4>
+              <h4>Sara Sweets ✨</h4>
               <p>Bringing pure happiness and authentic royal Indian sweets to your doorstep.</p>
             </div>
             <div className="footer-col">
@@ -371,7 +371,7 @@ export default function App() {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; 2026 Shree Sweets. All Rights Reserved.</p>
+            <p>&copy; 2026 Sara Sweets. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
