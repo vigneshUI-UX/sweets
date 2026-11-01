@@ -31,7 +31,7 @@ export default function App() {
     { name: "Royal Kesar Rasgulla", price: "₹450 / kg", img: "https://i.pinimg.com/736x/a4/b6/83/a4b683690e6c3c5d9b43b668f2ef19e9.jpg", rating: 4.9, badge: "Best Seller" },
     { name: "Pure Ghee Motichoor Laddu", price: "₹520 / kg", img: "https://i.pinimg.com/736x/04/93/49/04934921de2075a7c19f880fd7394d53.jpg", rating: 5.0, badge: "Top Rated" },
     { name: "Silver Leaf Kaju Katli", price: "₹950 / kg", img: "https://i.pinimg.com/736x/65/23/b4/6523b47bdf51b6ada6839ea1e86d0c17.jpg", rating: 4.8, badge: "Popular" },
-    { name: "Pistachio Gulab Jamun", price: "₹480 / kg", img: "https://i.pinimg.com/736x/7a/5f/8b/7a5f8be7d635cd0bf3248539821090aa.jpg", rating: 4.9, badge: "Chef Choice" },
+    { name: "Pistachio Gulab Jamun", price: "₹480 / kg", img: "https://i.pinimg.com/736x/7a/5f/8b/7a5f8be7d635cd0bf3248539821090aa.jpg", rating: 4.9, badge: " Choice" },
   ];
 
   const newArrivals = [
@@ -283,11 +283,11 @@ export default function App() {
       <section className="promo-section container">
         <div className="promo-banner" data-aos="fade-right">
           <div className="promo-text">
-            <h2>Chef’s Special Season Combo</h2>
+            <h2> Special Season Combo</h2>
             <p style={{ color: 'var(--text-muted)', marginBottom: '1.2rem', fontSize: '0.95rem' }}>Get a complimentary box of Dry Fruit Laddus on purchases over ₹2,500.</p>
             <button className="btn-primary">Claim Special Promotion</button>
           </div>
-          <img src="https://i.pinimg.com/736x/7a/3a/37/7a3a379a31e1bee938363f7b0b020538.jpg" alt="Special Promo Sweets" />
+          <img src="https://i.pinimg.com/1200x/04/ed/7d/04ed7d30a8ce6a6dfa416f571b71c84c.jpg" alt="Special Promo Sweets" />
         </div>
       </section>
 
