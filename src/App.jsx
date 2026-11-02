@@ -20,18 +20,19 @@ export default function App() {
     setActiveFaq(activeFaq === index ? null : index);
   };
 
+  // Emojis replaced with Bootstrap Icon classes and brand colors
   const categories = [
-    { title: "Pure Ghee Sweets", icon: "🪔", desc: "Motichoor, Laddus & Pinni" },
-    { title: "Kaju Delicacies", icon: "👑", desc: "Kaju Katli, Rolls & Pista Rolls" },
-    { title: "Bengali Mithai", icon: "🍯", desc: "Rasgulla, Gulab Jamun & Sandesh" },
-    { title: "Dry Fruit Box", icon: "🎁", desc: "Luxury Roasted Nut Hampers" }
+    { title: "Pure Ghee Sweets", iconClass: "bi bi-fire", iconColor: "#ff7043", desc: "Motichoor, Laddus & Pinni" },
+    { title: "Kaju Delicacies", iconClass: "bi bi-award-fill", iconColor: "#ffb703", desc: "Kaju Katli, Rolls & Pista Rolls" },
+    { title: "Bengali Mithai", iconClass: "bi bi-bucket-fill", iconColor: "#fb8500", desc: "Rasgulla, Gulab Jamun & Sandesh" },
+    { title: "Dry Fruit Box", iconClass: "bi bi-gift-fill", iconColor: "#e63946", desc: "Luxury Roasted Nut Hampers" }
   ];
 
   const bestSellers = [
     { name: "Royal Kesar Rasgulla", price: "₹450 / kg", img: "https://i.pinimg.com/736x/a4/b6/83/a4b683690e6c3c5d9b43b668f2ef19e9.jpg", rating: 4.9, badge: "Best Seller" },
-    { name: "Pure Ghee Motichoor Laddu", price: "₹520 / kg", img: "https://i.pinimg.com/736x/04/93/49/04934921de2075a7c19f880fd7394d53.jpg", rating: 5.0, badge: "Top Rated" },
+    { name: "Pure Ghee Laddu", price: "₹520 / kg", img: "https://i.pinimg.com/736x/04/93/49/04934921de2075a7c19f880fd7394d53.jpg", rating: 5.0, badge: "Top Rated" },
     { name: "Silver Leaf Kaju Katli", price: "₹950 / kg", img: "https://i.pinimg.com/736x/65/23/b4/6523b47bdf51b6ada6839ea1e86d0c17.jpg", rating: 4.8, badge: "Popular" },
-    { name: "Pistachio Gulab Jamun", price: "₹480 / kg", img: "https://i.pinimg.com/736x/7a/5f/8b/7a5f8be7d635cd0bf3248539821090aa.jpg", rating: 4.9, badge: " Choice" },
+    { name: "Pistachio Gulab Jamun", price: "₹480 / kg", img: "https://i.pinimg.com/736x/7a/5f/8b/7a5f8be7d635cd0bf3248539821090aa.jpg", rating: 4.9, badge: "Choice" },
   ];
 
   const newArrivals = [
@@ -50,7 +51,7 @@ export default function App() {
     { name: "vicky", text: "The Kaju Katli was amazingly fresh and melt-in-mouth! Ordered 20 gift boxes for my office staff during Diwali.", rating: 5 },
     { name: "udhay", text: "Pure desi ghee aroma in every piece of Motichoor Laddu. Best authentic sweets shop delivery in town!", rating: 5 },
     { name: "sara", text: "The Diwali mithai trunk packaging looked so luxurious and royal. Will definitely order every festival season.", rating: 5 },
-    { name: "Ananya ", text: "Prompt express delivery and vacuum packaging preserved the texture perfectly. Highly recommended!", rating: 5 },
+    { name: "Ananya", text: "Prompt express delivery and vacuum packaging preserved the texture perfectly. Highly recommended!", rating: 5 },
   ];
 
   const faqs = [
@@ -64,7 +65,9 @@ export default function App() {
       {/* 1. NAVBAR */}
       <nav className="navbar">
         <div className="container nav-container">
-          <a href="#" className="logo">Sara Sweet</a>
+          <a href="#" className="logo">
+           Sara Sweet
+          </a>
           <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
             <li><a href="#hero" onClick={() => setMobileMenuOpen(false)}>Home</a></li>
             <li><a href="#categories" onClick={() => setMobileMenuOpen(false)}>Categories</a></li>
@@ -76,7 +79,7 @@ export default function App() {
           </ul>
 
           <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'center' }}>
-            <button className="btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}>
+            <button className="btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
               <ShoppingBag size={16} /> Cart (0)
             </button>
             <button className="mobile-toggle" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -86,16 +89,17 @@ export default function App() {
         </div>
       </nav>
 
-      {/* 2. HERO WITH BACKGROUND IMAGE (VIDEO REMOVED) */}
+      {/* 2. HERO WITH BACKGROUND IMAGE */}
       <section id="hero" className="hero">
         <div className="hero-overlay"></div>
         <div className="hero-content" data-aos="zoom-in">
-          <span className="hero-badge">✨ Festive Edition 2026</span>
           <h1>Experience Pure Royal Indian Sweets</h1>
           <p>Handcrafted with pure desi ghee, premium nuts, and decades of traditional heritage.</p>
           <div className="hero-btns">
             <a href="#bestsellers" className="btn-primary">Explore Sweets Menu</a>
-            <a href="#diwali" className="btn-secondary" style={{ background: '#ffffff', color: 'var(--primary-purple)', borderColor: '#ffffff' }}>Diwali Specials 🪔</a>
+            <a href="#diwali" className="btn-secondary" style={{ background: '#ffffff', color: 'var(--primary-purple)', borderColor: '#ffffff', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              Diwali Specials <i className="bi bi-stars"></i>
+            </a>
           </div>
         </div>
       </section>
@@ -112,7 +116,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 4. CATEGORIES */}
+      {/* 4. CATEGORIES (Bootstrap Icons applied) */}
       <section id="categories" className="category-section container">
         <div className="section-title" data-aos="fade-up">
           <h2>Shop By Category</h2>
@@ -121,7 +125,9 @@ export default function App() {
         <div className="category-grid">
           {categories.map((cat, idx) => (
             <div key={idx} className="category-card" data-aos="fade-up" data-aos-delay={idx * 100}>
-              <div className="category-icon">{cat.icon}</div>
+              <div className="category-icon" style={{ color: cat.iconColor, fontSize: '2.5rem', marginBottom: '12px' }}>
+                <i className={cat.iconClass}></i>
+              </div>
               <h3>{cat.title}</h3>
               <p>{cat.desc}</p>
             </div>
@@ -146,7 +152,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 6. BEST-SELLING PRODUCTS (4 CARDS) */}
+      {/* 6. BEST-SELLING PRODUCTS */}
       <section id="bestsellers" className="products-section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
@@ -163,7 +169,7 @@ export default function App() {
                     <Star size={14} fill="#eab308" /> {item.rating}
                   </div>
                   <h3>{item.name}</h3>
-                  <p>Freshly prepared in pure A2 Ghee with silver leaf coating.</p>
+                  <p>Freshly prepared in pure A2 Ghee.</p>
                   <div className="product-bottom">
                     <span className="price">{item.price}</span>
                     <button className="btn-primary" style={{ padding: '0.4rem 0.9rem', fontSize: '0.85rem' }}>Order Now</button>
@@ -175,11 +181,11 @@ export default function App() {
         </div>
       </section>
 
-      {/* 7. NEW ARRIVALS (4 CARDS) */}
+      {/* 7. NEW ARRIVALS */}
       <section id="newarrivals" className="products-section" style={{ background: 'var(--soft-purple-bg)' }}>
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>New Arrivals </h2>
+            <h2>New Arrivals</h2>
             <p>Fresh festive recipes crafted specially for this season</p>
           </div>
           <div className="product-grid">
@@ -217,7 +223,9 @@ export default function App() {
               <div className="collection-overlay">
                 <h3>{col.title}</h3>
                 <p>{col.desc}</p>
-                <button className="btn-primary" style={{ width: 'fit-content' }}>Explore Trunk <ArrowRight size={16} /></button>
+                <button className="btn-primary" style={{ width: 'fit-content', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                  Explore Trunk <ArrowRight size={16} />
+                </button>
               </div>
             </div>
           ))}
@@ -228,7 +236,7 @@ export default function App() {
       <section id="diwali" className="diwali-wrapper">
         <div className="diwali-section" data-aos="zoom-in-up">
           <div style={{ textAlign: 'center', width: '100%' }}>
-            <h2>🪔 Grand Diwali Special Offers 🪔</h2>
+            <h2>Grand Diwali Special Offers</h2>
             <p style={{ fontSize: '0.95rem', opacity: '0.9' }}>Pre-order your festive gift boxes and get exclusive discounts.</p>
             <div className="diwali-grid">
               <div className="diwali-card" data-aos="flip-left" data-aos-delay="100">
@@ -254,12 +262,12 @@ export default function App() {
         </div>
       </section>
 
-      {/* 10. REVIEWS (4 CARDS) */}
+      {/* 10. REVIEWS */}
       <section id="reviews" className="reviews-section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>Customer Reviews</h2>
-            <p>See why thousands of sweet lovers choose Shree Sweets</p>
+            <p>See why thousands of sweet lovers choose Sara Sweets</p>
           </div>
           <div className="reviews-grid">
             {reviews.map((rev, idx) => (
@@ -272,7 +280,7 @@ export default function App() {
                   </div>
                   <p className="review-text">"{rev.text}"</p>
                 </div>
-                <span className="review-author">- {rev.name}</span>
+                <span className="review-author">{rev.name}</span>
               </div>
             ))}
           </div>
@@ -283,7 +291,7 @@ export default function App() {
       <section className="promo-section container">
         <div className="promo-banner" data-aos="fade-right">
           <div className="promo-text">
-            <h2> Special Season Combo</h2>
+            <h2>Special Season Combo</h2>
             <p style={{ color: 'var(--text-muted)', marginBottom: '1.2rem', fontSize: '0.95rem' }}>Get a complimentary box of Dry Fruit Laddus on purchases over ₹2,500.</p>
             <button className="btn-primary">Claim Special Promotion</button>
           </div>
@@ -323,7 +331,7 @@ export default function App() {
             <h3 style={{ color: 'var(--primary-purple)', fontSize: '1.3rem', marginBottom: '0.4rem', textAlign: 'center' }}>Visit Our Store</h3>
             <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: '1.5', fontSize: '0.9rem', textAlign: 'center' }}>Experience hot, freshly made sweets prepared live at our counter.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontSize: '0.9rem', alignItems: 'center' }}>
-              <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'center' }}><MapPin color="var(--primary-purple)" size={18} /><span>12, TamilNadu,Erode</span></div>
+              <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'center' }}><MapPin color="var(--primary-purple)" size={18} /><span>12, TamilNadu, Erode</span></div>
               <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'center' }}><Phone color="var(--primary-purple)" size={18} /><span>+91 7305195172</span></div>
               <div style={{ display: 'flex', gap: '0.8rem', alignItems: 'center' }}><Mail color="var(--primary-purple)" size={18} /><span>sarasweets@gmail.com</span></div>
             </div>
@@ -342,7 +350,7 @@ export default function App() {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-col">
-              <h4>Sara Sweets ✨</h4>
+              <h4> Sara Sweets</h4>
               <p>Bringing pure happiness and authentic royal Indian sweets to your doorstep.</p>
             </div>
             <div className="footer-col">
